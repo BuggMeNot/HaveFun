@@ -1,5 +1,3 @@
-## 2. Comparing Object-Oriented to Functional ##
-
 
 def read(filename):
     with open(filename, 'r') as f:
