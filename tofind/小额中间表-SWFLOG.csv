@@ -1,0 +1,49 @@
+名称,类型,可为空,默认/表达式,存储,注释
+FLOWID,VARCHAR2(22),N,,,流程编码
+LOGNO,NUMBER,N,,,流程序号
+MODELNO,NUMBER,N,,,模板号
+NODENO,NUMBER,N,,,当前节点号
+NODENAME,VARCHAR2(100),N,,,当前节点名称
+BUSINESSNO,VARCHAR2(25),N,,,业务号
+HANDLEDEPT,VARCHAR2(10),Y,,,处理部门
+HANDLERCODE,VARCHAR2(10),Y,,,处理人员代码
+HANDLERNAME,VARCHAR2(30),Y,,,处理人员名称
+FLOWINTIME,VARCHAR2(19),Y,,,案件流入时间（日志生成时间）
+TIMELIMIT,NUMBER,Y,,,处理时限
+HANDLETIME,VARCHAR2(19),Y,,,案件处理时间
+SUBMITTIME,VARCHAR2(19),Y,,,案件提交时间
+NODESTATUS,VARCHAR2(1),N,,,节点状态 0:待处理2:正在处理3:已处理未提交4:已提交5:回退处理任务6:已注销
+FLOWSTATUS,VARCHAR2(1),N,,,流状态 0:已关闭 1、2正常流转
+PACKAGEID,VARCHAR2(16),N,,,明细信息包ID
+FLAG,VARCHAR2(10),Y,,,备用标志 通赔案件全为1
+TASKNO,NUMBER,N,,,任务编号
+TASKTYPE,VARCHAR2(3),Y,,,任务类型M:多任务节点 S:单任务的节点
+NODETYPE,VARCHAR2(5),N,,,"节点类型 regis报案,claim立案,sched调度,check查勘,certa定损,verif核损,wound人伤,certi单证,compe实赔,compp理算,veric核赔,endca结案"
+TITLESTR,VARCHAR2(250),Y,,,任务备注
+BUSINESSTYPE,VARCHAR2(5),Y,,,业务类型
+RISKCODE,VARCHAR2(4),Y,,,险种代码
+KEYIN,VARCHAR2(25),Y,,,"任务接收载体键值 比如该节点是立案,那么流进的是报案号,流出的是立案号"
+KEYOUT,VARCHAR2(25),Y,,,任务流出键值
+DEPTNAME,VARCHAR2(120),N,,,案件处理部门名称
+MAINFLOWID,VARCHAR2(22),Y,,,主流程编号
+SUBFLOWID,VARCHAR2(22),Y,,,子流程编号
+POSX,NUMBER,N,,,节点X坐标
+POSY,NUMBER,N,,,节点Y坐标
+ENDFLAG,VARCHAR2(1),Y,,,结束标志
+BEFOREHANDLERCODE,VARCHAR2(10),Y,,,上个节点处理人代码
+BEFOREHANDLERNAME,VARCHAR2(30),Y,,,上个节点处理人名称
+POLICYNO,VARCHAR2(22),Y,,,保单号码
+TYPEFLAG,VARCHAR2(2),Y,,,类型标志
+COMCODE,VARCHAR2(20),Y,,,归属机构
+SCHEDULEID,NUMBER,Y,,,调度号码
+LOSSITEMCODE,VARCHAR2(4),Y,,,"损失标的序号 在定核损中如果是人的话用0,财产损失为-1,其它的都表示的是车辆的标的序号"
+LOSSITEMNAME,VARCHAR2(255),Y,,,损失标的名称
+INSURECARFLAG,VARCHAR2(2),Y,,,是否为本保单车辆(1.是2.否)
+HANDLERRANGE,VARCHAR2(5),Y,,,可操作/处理的级别
+EXIGENCEGREE,VARCHAR2(3),Y,,,紧急程度
+INSUREDNAME,VARCHAR2(120),Y,,,被保险人名称
+REGISTNO,VARCHAR2(22),Y,,,报案号
+CASETYPE,VARCHAR2(1),Y,,,案件状态 0非移动端案件  1一般移动端案件 2视频申请的移动端案件 3已受理的移动端案件 4单证理赔端受理
+ISLITTLECASE,VARCHAR2(1),Y,,,是否小额案件 0否 1是
+AUTOSCHED,VARCHAR2(1),Y,,,是否自动调度案件（1是，0否）
+AUTOCOINFLAG,VARCHAR2(2),Y,,,是否为联保业务标识
